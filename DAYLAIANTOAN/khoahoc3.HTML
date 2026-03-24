@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khóa Học Hạng B.01 - Lái Xe An Toàn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hover-up:hover { transform: translateY(-5px); }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 antialiased">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 md:px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.HTML'">
+                <i class="fas fa-steering-wheel text-3xl text-blue-700"></i>
+                <div>
+                    <h1 class="font-extrabold text-xl md:text-2xl text-blue-800 leading-tight">LÁI XE AN TOÀN</h1>
+                    <p class="text-[10px] md:text-xs text-red-600 font-bold tracking-widest uppercase">CẬP NHẬT LUẬT MỚI NHẤT</p>
+                </div>
+            </div>
+            <div class="hidden lg:flex space-x-6 font-bold text-gray-700 text-sm">
+                <a href="index.HTML" class="hover:text-blue-600 transition">Trang Chủ</a>
+                <a href="index.HTML#khoa-hoc" class="hover:text-blue-600 transition">Khóa Học</a>
+                <a href="index.HTML#luat-moi" class="hover:text-blue-600 transition">Luật Mới</a>
+                <a href="index.HTML#ho-so" class="hover:text-blue-600 transition">Hồ Sơ</a>
+                <a href="index.HTML#ho-so" class="hover:text-blue-600 transition">Điều Kiện</a>
+                <a href="index.HTML#quy-trinh" class="hover:text-blue-600 transition">Quy Trình</a>
+                <a href="index.HTML#dang-ky" class="hover:text-blue-600 transition">Form</a>
+            </div>
+            <div class="flex flex-col items-end gap-2">
+                <a href="tel:0845517979" class="bg-red-600 hover:bg-red-700 text-white font-bold py-1.5 px-4 rounded-full inline-flex items-center transition shadow-lg animate-pulse text-sm">
+                    <i class="fas fa-phone-volume mr-2"></i> Mr Long: 084.551.7979
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-blue-50 py-3 border-b border-blue-100">
+        <div class="container mx-auto px-6 max-w-6xl text-sm font-semibold">
+            <a href="index.HTML" class="text-blue-600 hover:underline"><i class="fas fa-home mr-1"></i>Trang Chủ</a> 
+            <span class="mx-2 text-gray-400">/</span> 
+            <span class="text-gray-600" id="breadcrumb-title">Khóa Học Hạng B.01</span>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-6 max-w-6xl pt-12 pb-6">
+        <div class="bg-white rounded-2xl shadow-md border border-gray-100 p-6 md:p-10 flex flex-col lg:flex-row gap-10">
+            
+            <div class="lg:w-1/2">
+                <div class="rounded-xl overflow-hidden border border-gray-200 shadow-sm mb-4 bg-gray-50 h-[300px] md:h-[400px] flex items-center justify-center relative">
+                    <div class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full z-10 animate-pulse">-22% Ưu Đãi</div>
+                    <img id="main-image" src="" alt="Ảnh khóa học chính" class="w-full h-full object-cover">
+                </div>
+                <div id="thumbnails-container" class="flex gap-3 overflow-x-auto hide-scrollbar py-2">
+                    </div>
+            </div>
+
+            <div class="lg:w-1/2 flex flex-col justify-center">
+                <div class="inline-block bg-blue-500 text-white font-bold px-3 py-1 rounded-full text-xs mb-4 uppercase tracking-wider w-max">
+                    <i class="fas fa-car mr-1"></i> Dành Cho Gia Đình & Xe Điện
+                </div>
+                
+                <h1 id="course-title" class="text-3xl md:text-4xl font-extrabold text-blue-900 mb-4 uppercase">Đang tải tên khóa học...</h1>
+                
+                <div class="text-3xl font-extrabold text-red-600 mb-6 border-b border-gray-100 pb-6">
+                    18.600.000 đ <span class="text-lg font-normal text-gray-500 line-through ml-2">23.900.000 đ</span>
+                    <p class="text-sm font-normal text-green-600 mt-2"><i class="fas fa-check-circle mr-1"></i> Tiết kiệm: 5.300.000 đ</p>
+                </div>
+
+                <div class="bg-blue-50 p-5 rounded-xl border border-blue-100 mb-8">
+                    <h3 class="font-bold text-blue-800 mb-3 uppercase text-sm"><i class="fas fa-list-check mr-2"></i>Chi tiết nhanh</h3>
+                    <ul class="space-y-3 text-gray-700 text-sm">
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> <strong>Đối tượng:</strong> Lái xe gia đình, xe điện (Không kinh doanh).</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> <strong>Thời gian:</strong> Đào tạo khoảng 55 ngày theo chuẩn Bộ GTVT.</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Trọn gói không phát sinh, chạy đủ số km DAT theo luật mới.</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Lý thuyết học linh hoạt (Trực tiếp hoặc Online tại nhà).</li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 mt-auto">
+                    <a href="tel:0845517979" class="flex-1 bg-red-600 hover:bg-red-700 text-white text-center font-bold py-4 rounded-xl transition shadow-lg uppercase flex items-center justify-center group">
+                        <i class="fas fa-phone-alt mr-2 group-hover:animate-bounce"></i> Gọi Tư Vấn Ngay
+                    </a>
+                    <a href="index.HTML#dang-ky" class="flex-1 bg-gray-800 hover:bg-gray-900 text-white text-center font-bold py-4 rounded-xl transition shadow-lg uppercase flex items-center justify-center">
+                        <i class="fas fa-paper-plane mr-2"></i> Điền Form Đăng Ký
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-6 max-w-6xl pb-12">
+        <div class="bg-white rounded-2xl shadow-md border border-gray-100 p-8 md:p-12">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-blue-900 mb-6 uppercase border-b-2 border-red-600 inline-block pb-2">Thông Tin Chi Tiết Khóa Học</h2>
+            
+            <div class="prose max-w-none text-gray-700 leading-relaxed">
+                <p class="mb-4 text-lg"><strong>Khoá học lái xe Hạng B.01 (Ô tô Tự động & Xe điện) tại Trung Tâm Đào Tạo Lái Xe An Toàn</strong></p>
+                <ul class="space-y-2 mb-6">
+                    <li>⛔️ <strong>Độ tuổi:</strong> Từ 18 tuổi trở lên, đủ tiêu chuẩn sức khoẻ lái xe.</li>
+                    <li>⛔️ <strong>Đối tượng:</strong> Lái xe gia đình, cá nhân (không hành nghề kinh doanh vận tải).</li>
+                </ul>
+
+                <p class="mb-4">
+                    ✅ Bạn đang băn khoăn tìm cho mình 1 nơi học lái xe uy tín do có quá nhiều trung tâm dạy lái với mức học phí khác nhau?<br>
+                    ✅ Bạn lo lắng chi phí học lái xe có phù hợp với khả năng kinh tế, lúc học có bị "vẽ" thêm chi phí ngoài dự đoán?<br>
+                    ✅ Bạn sợ học lái xe khó, sợ những buổi học đầy áp lực bởi thầy giáo khó tính?<br>
+                    <em>Hãy để chúng tôi giải quyết mọi thắc mắc của bạn. Với phương châm làm nghề bằng TÂM HUYẾT và ĐẠO ĐỨC, trung tâm cam kết mang lại trải nghiệm học tập thoải mái, chuyên nghiệp và minh bạch nhất.</em>
+                </p>
+
+                <h4 class="text-lg font-bold text-blue-800 mt-8 mb-3 bg-blue-50 p-2 rounded border-l-4 border-blue-600">♻️ CHƯƠNG TRÌNH ĐÀO TẠO</h4>
+                <p class="mb-2">Thời gian học lái xe ô tô hạng B.01 (Xe tự động) là <strong>khoảng 55 ngày</strong> theo quy định của Bộ GTVT.</p>
+                <ul class="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Học lý thuyết:</strong> Học viên được đào tạo luật giao thông đường bộ, biển báo, cấu tạo xe cơ bản, cách sửa chữa sự cố nhẹ và tâm lý xử lý tình huống trên đường. Có 2 lựa chọn: 
+                        <ul class="list-circle pl-6 mt-1 text-sm">
+                            <li>Học trực tiếp (Offline) tại văn phòng.</li>
+                            <li>Học Online (Google Meet/Zoom) dành cho người bận rộn, tiết kiệm thời gian di chuyển.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Học thực hành:</strong> Đào tạo sa hình trên bãi tập đạt chuẩn và chạy đường trường. Đảm bảo chạy đủ số km thiết bị giám sát hành trình (DAT) theo quy định mới, giúp học viên vững tay lái và vượt qua kỳ thi sát hạch dễ dàng. Thời gian thực hành được sắp xếp linh động theo lịch của học viên.</li>
+                </ul>
+
+                <h4 class="text-lg font-bold text-blue-800 mt-8 mb-3 bg-blue-50 p-2 rounded border-l-4 border-blue-600">♻️ QUY TRÌNH THI SÁT HẠCH</h4>
+                <ul class="list-disc pl-6 space-y-2 mb-6">
+                    <li>Kết thúc đào tạo, học viên sẽ tham gia kỳ thi <strong>Tốt nghiệp</strong> (cấp chứng chỉ nghề), sau đó là kỳ thi <strong>Sát hạch</strong> (Sở GTVT cấp bằng).</li>
+                    <li>Trình tự thi chuẩn: Lý thuyết (trắc nghiệm) ➔ Mô phỏng tình huống (trên máy tính) ➔ Thực hành Sa hình (xe chip) ➔ Thực hành Đường trường.</li>
+                    <li><em>Lưu ý:</em> Nếu có lý do cá nhân không thể tiếp tục, trung tâm hỗ trợ <strong>bảo lưu hồ sơ miễn phí trong 1 năm</strong>.</li>
+                </ul>
+
+                <h4 class="text-lg font-bold text-blue-800 mt-8 mb-3 bg-blue-50 p-2 rounded border-l-4 border-blue-600">♻️ CAM KẾT CHẤT LƯỢNG</h4>
+                <ul class="space-y-2 mb-6">
+                    <li><i class="fas fa-hand-holding-usd text-green-500 mr-2"></i> <strong>Học phí trọn gói 100%:</strong> Cam kết bằng văn bản không phát sinh thêm chi phí (xăng xe, bãi tập, thầy cô) trong suốt khóa học.</li>
+                    <li><i class="fas fa-graduation-cap text-green-500 mr-2"></i> <strong>Tỉ lệ đậu cực cao:</strong> Mọi giờ học thực hành và lý thuyết đều được theo dõi sát sao. Đội ngũ giáo viên giàu kinh nghiệm trực tiếp kèm 1-1.</li>
+                    <li><i class="fas fa-calendar-check text-green-500 mr-2"></i> <strong>Không chờ đợi:</strong> Học viên đăng ký là được xếp lớp và đi học ngay, lịch thi rõ ràng.</li>
+                </ul>
+
+                <h4 class="text-lg font-bold text-blue-800 mt-8 mb-3 bg-blue-50 p-2 rounded border-l-4 border-blue-600">📛 HỒ SƠ ĐĂNG KÝ GHI DANH</h4>
+                <p class="mb-2">Thủ tục cực kỳ đơn giản, trung tâm hỗ trợ chụp hình và làm hồ sơ hoàn toàn miễn phí:</p>
+                <ul class="list-disc pl-6 space-y-2 mb-6">
+                    <li>01 bản gốc CCCD/CMND (hoặc bản photo).</li>
+                    <li>Bằng lái xe máy A1 (nếu có - dạng thẻ PET cứng).</li>
+                    <li>10 ảnh thẻ 3x4 (Phông nền xanh - Có thể chụp trực tiếp tại văn phòng).</li>
+                </ul>
+
+                <div class="bg-gray-900 text-white p-6 rounded-xl mt-8 text-center shadow-lg">
+                    <p class="mb-2 text-lg">ĐẶC BIỆT: HỖ TRỢ LÀM HỒ SƠ TẬN NHÀ CHO HỌC VIÊN BẬN RỘN!</p>
+                    <p class="mb-4 text-gray-300 text-sm">Ghi danh nhanh chóng - Học sớm - Thi sớm.</p>
+                    <a href="tel:0845517979" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105">
+                        <i class="fas fa-phone-alt mr-2"></i> Gọi Cho Mr Long: 084.551.7979
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-6 text-center border-t border-gray-800 pt-8 text-sm text-gray-500">
+            <p>&copy; 2026 Bản quyền thuộc về daylaiantoan.vn. Đại ca Vũ Thế Long.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ==========================================
+        // CONFIG ĐÃ ĐƯỢC SET CHUẨN CHO KHÓA HỌC 3
+        // ==========================================
+        const CONFIG = {
+            folderName: 'anh khoahoc3',     
+            imageCount: 1,                  
+            courseName: 'Khóa Học Hạng B.01 (Ô tô Tự Động & Xe Điện)'  
+        };
+        // ==========================================
+
+        document.getElementById('course-title').innerText = CONFIG.courseName;
+        document.getElementById('breadcrumb-title').innerText = CONFIG.courseName;
+        document.title = CONFIG.courseName + " - Lái Xe An Toàn";
+
+        const thumbContainer = document.getElementById('thumbnails-container');
+        const mainImage = document.getElementById('main-image');
+
+        function changeMainImage(src) {
+            mainImage.src = src;
+        }
+
+        let thumbsHTML = '';
+        let firstValidImageSet = false;
+
+        for(let i = 1; i <= CONFIG.imageCount; i++) {
+            let num = i.toString().padStart(2, '0');
+            
+            let imgSrc = `${CONFIG.folderName}/${num}.png`;
+            let fallbackLogic = `this.onerror=function(){ this.onerror=function(){ this.onerror=null; this.src='${CONFIG.folderName}/${num}.webp'; }; this.src='${CONFIG.folderName}/${num}.jpg'; }; this.src='${CONFIG.folderName}/${num}.png';`;
+
+            if(!firstValidImageSet) {
+                mainImage.src = imgSrc;
+                mainImage.setAttribute('onerror', fallbackLogic);
+                firstValidImageSet = true;
+            }
+
+            thumbsHTML += `
+                <img src="${imgSrc}" 
+                     onerror="${fallbackLogic}"
+                     onclick="changeMainImage(this.src)"
+                     class="w-20 h-20 md:w-24 md:h-24 object-cover rounded-lg border-2 border-transparent hover:border-blue-500 cursor-pointer shadow-sm flex-shrink-0 transition" 
+                     alt="Ảnh mô tả ${num}">
+            `;
+        }
+
+        thumbContainer.innerHTML = thumbsHTML;
+    </script>
+</body>
+</html>
