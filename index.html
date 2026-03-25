@@ -27,8 +27,8 @@
             let num = i.toString().padStart(2, '0'); // Định dạng 01, 02... 28
             sliderHTML += `
                 <div class="snap-center shrink-0 w-64 md:w-80 shadow-md rounded-xl bg-white overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300 group">
-                    <img src="${num}.webp" 
-                         onerror="this.onerror=function(){ this.onerror=null; this.src='${num}.jpg'; }; this.src='${num}.png';" 
+                    <img src="anh index/${num}.webp" 
+                         onerror="this.onerror=function(){ this.onerror=null; this.src='anh index/${num}.jpg'; }; this.src='anh index/${num}.png';" 
                          loading="lazy" alt="Học lái xe hạng thực tế ${num}" class="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition duration-500 cursor-pointer">
                     <p class="text-[11px] text-center text-gray-500 font-semibold p-2 uppercase bg-gray-50 border-t border-gray-100">Góc Thực Hành ${num}</p>
                 </div>`;
