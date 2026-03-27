@@ -16,7 +16,7 @@
 
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 md:px-6 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.HTML'">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
                 <i class="fas fa-steering-wheel text-3xl text-blue-700"></i>
                 <div>
                     <h1 class="font-extrabold text-xl md:text-2xl text-blue-800 leading-tight">LÁI XE AN TOÀN</h1>
@@ -42,7 +42,7 @@
 
     <div class="bg-blue-50 py-3 border-b border-blue-100">
         <div class="container mx-auto px-6 max-w-6xl text-sm font-semibold">
-            <a href="index.HTML" class="text-blue-600 hover:underline"><i class="fas fa-home mr-1"></i>Trang Chủ</a> 
+            <a href="index.html" class="text-blue-600 hover:underline"><i class="fas fa-home mr-1"></i>Trang Chủ</a> 
             <span class="mx-2 text-gray-400">/</span> 
             <span class="text-gray-600" id="breadcrumb-title">Khóa Học Hạng B</span>
         </div>
@@ -87,7 +87,7 @@
                     <a href="tel:0845517979" class="flex-1 bg-red-600 hover:bg-red-700 text-white text-center font-bold py-4 rounded-xl transition shadow-lg uppercase flex items-center justify-center group">
                         <i class="fas fa-phone-alt mr-2 group-hover:animate-bounce"></i> Gọi Tư Vấn Ngay
                     </a>
-                    <a href="index.HTML#dang-ky" class="flex-1 bg-gray-800 hover:bg-gray-900 text-white text-center font-bold py-4 rounded-xl transition shadow-lg uppercase flex items-center justify-center">
+                    <a href="index.html#dang-ky" class="flex-1 bg-gray-800 hover:bg-gray-900 text-white text-center font-bold py-4 rounded-xl transition shadow-lg uppercase flex items-center justify-center">
                         <i class="fas fa-paper-plane mr-2"></i> Điền Form Đăng Ký
                     </a>
                 </div>
@@ -217,7 +217,7 @@
                     <div class="absolute bottom-0 left-0 -ml-8 -mb-8 w-24 h-24 rounded-full bg-red-600 opacity-50"></div>
                     <h3 class="text-2xl font-bold mb-3 relative z-10">BẠN ĐÃ SẴN SÀNG LẤY BẰNG B?</h3>
                     <p class="mb-6 text-blue-100 relative z-10">Chuyên viên của chúng tôi sẵn sàng hỗ trợ làm hồ sơ miễn phí tại nhà cho bạn ngay hôm nay!</p>
-                    <a href="index.HTML#dang-ky" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-extrabold py-3 px-10 rounded-full transition transform hover:scale-105 shadow-lg relative z-10">
+                    <a href="index.html#dang-ky" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-extrabold py-3 px-10 rounded-full transition transform hover:scale-105 shadow-lg relative z-10">
                         ĐĂNG KÝ GIỮ SUẤT ƯU ĐÃI
                     </a>
                 </div>
@@ -253,18 +253,17 @@
         }
 
         let thumbsHTML = '';
-        let firstValidImageSet = false;
-
+        
         for(let i = 1; i <= CONFIG.imageCount; i++) {
             let num = i.toString().padStart(2, '0');
             
             let imgSrc = `${CONFIG.folderName}/${num}.png`;
             let fallbackLogic = `this.onerror=function(){ this.onerror=function(){ this.onerror=null; this.src='${CONFIG.folderName}/${num}.webp'; }; this.src='${CONFIG.folderName}/${num}.jpg'; }; this.src='${CONFIG.folderName}/${num}.png';`;
 
-            if(!firstValidImageSet) {
+            // Đồng bộ tối ưu giống file trước cho sạch code
+            if(i === 1) {
                 mainImage.src = imgSrc;
                 mainImage.setAttribute('onerror', fallbackLogic);
-                firstValidImageSet = true;
             }
 
             thumbsHTML += `
